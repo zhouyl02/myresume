@@ -1,0 +1,81 @@
+.draw {
+  position: fixed;
+  width: 1px;
+  line-height: 1px;
+  cursor: none;
+}
+
+@keyframes floatOne {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -20px, 0) scale(.2) rotate(45deg);
+  }
+}
+
+@keyframes floatTwo {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -35px, 0) scale(.1) rotate(45deg);
+  }
+}
+
+@keyframes floatThree {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -50px, 0) scale(.3) rotate(45deg);
+  }
+}
+
+@keyframes floatFour {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -65px, 0) scale(.1) rotate(45deg);
+  }
+}
+
+@keyframes floatFive {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -80px, 0) scale(.2) rotate(45deg);
+  }
+}

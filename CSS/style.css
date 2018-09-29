@@ -32,15 +32,31 @@ content: '';
 display: block;
 clear: both;
 }
+[data-x].active{
+    outline: 10px solid red;
+  }
+  [data-x].offset{
+    transform: translateY(100px);
+  }
+  [data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+  }
+  @keyframes slideUp{
+    0%{
+      transform: translateY(-30px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
 
-
-.topNavBar {
-padding: 20px 0 20px 0;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-}
+.topNavBar { padding: 20px 0; position: fixed; top: 0; left: 0; width: 100%; 
+    transition: all 0.5s; color: #d4d2d5;
+  }
+  .topNavBar.sticky{background: #2c2e32;padding: 10px 0; z-index: 1;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.5);color: #989ca1;
+  }
 .topNavBar-inner {
 padding: 0 16px;
 }
@@ -57,19 +73,50 @@ float: left;
 margin-left: 17px;
 margin-right: 17px;
 }
-.topNavBar nav > ul > li > a {
-font-size: 12px;
-color: #d4d2d5;
-font-weight: bold;
-border-top: 3px solid transparent;
-border-bottom: 3px solid transparent;
-padding-top: 5px;
-padding-bottom: 5px;
-display: block;
-}
-.topNavBar nav > ul > li > a:hover {
-border-bottom: 3px solid #ff5e62;
-}
+.topNavBar nav > ul > li > a { font-size: 12px; color: inherit; font-weight: bold; border-top: 3px solid transparent; border-bottom: 3px solid transparent;
+    padding-top: 5px; padding-bottom: 5px; display: block; position: relative;}
+  .topNavBar nav > ul > li.active > a::after,
+  .topNavBar nav > ul > li.highlight > a::after { 
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e06567;
+    height: 3px;
+    animation: menuSlide .3s;
+  }
+  @keyframes menuSlide{
+    0%{ width: 0; }
+    100%{ width: 100%; }
+  }
+  .topNavBar .submenu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  .topNavBar li.active> .submenu{
+    display: block;
+    animation: submenuSlide .3s;
+  }
+  @keyframes submenuSlide{
+    0%{
+      margin-right: 100%;
+    }
+    100%{
+      margin-right: 0%;
+    }
+  }
+  .topNavBar .submenu > li{
+    white-space: nowrap;
+    padding: 5px 10px;
+  }
+  
 
 .topNavBar .logo {
 font-size: 24px;
@@ -166,7 +213,7 @@ border-radius: 50%;
 margin: 16px;
 }
 .userCard > footer.media > a:hover {
-background: #e55458;
+background: #c95054;
 }
 .userCard svg {
 width: 30px;
@@ -250,70 +297,15 @@ height: 5px;
 background: #604145;
 border-radius: 2px;
 margin: 4px 0 40px;
+overflow: hidden;
 }
-section.skills .progressBar > .progress {
-height: 100%;
-background: #ff5e62;
-width: 70%;
-border-radius: 2px;
-}
-
+section.skills .progressBar > .progress { height: 100%; background: #ff5e62; 
+    width: 70%; border-radius: 2px; transform: translateX(0); transition: all 1s; }
+section.skills.offset .progress{
+      transform: translateX(-100%);
+    }
+    
 section.portfolio {
 text-align: center;
 margin-bottom: 100px;
-}
-section.portfolio > nav{
-text-align: center;
-}
-section.portfolio > nav > ol{
-margin: 0 auto;
-display: inline-block;
-vertical-align: top;
-}
-section.portfolio > nav > ol > li{
-float: left;
-margin-left: 40px;
-cursor: pointer;
-color: #d4d2d5;
-}
-section.portfolio > nav > ol > li:first-child{
-margin-left: 0;
-
-}
-section.portfolio > nav{
-display: inline-block;
-vertical-align: top;
-margin-top: 32px;
-}
-section.portfolio > nav .bar{
-height: 5px;
-background: #262629;
-margin-top: 5px;
-margin-bottom: 28px;
-border-radius: 2px;
-}
-section.portfolio > nav .bar-inner{
-height: 100%;
-background: #E6686A;
-border-radius: 2px;
-transition: all 0.3s;
-}
-section.portfolio > nav .bar.state-1 .bar-inner{
-margin-left: 0;
-width: 50px;
-}
-section.portfolio > nav .bar.state-2 .bar-inner{
-margin-left: 65px;
-width: 50px;
-}
-section.portfolio > nav .bar.state-3 .bar-inner{
-margin-left: 140px;
-width: 96px;
-}
-section.portfolio .works{
-position: relative;
-}
-section.portfolio .works > .big,
-section.portfolio .works > .small {
-position: absolute;
 }

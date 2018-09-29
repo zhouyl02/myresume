@@ -49,9 +49,9 @@ function animate(time) {
   TWEEN.update(time);
 }
 requestAnimationFrame(animate);
-
 for(let i=0; i<aTags.length; i++){
   aTags[i].onclick = function(x){
+    if(i !== 3 && i !== 4){
     x.preventDefault()
     let a = x.currentTarget
     let href = a.getAttribute('href') //'#siteAbout'
@@ -72,5 +72,5 @@ for(let i=0; i<aTags.length; i++){
         window.scrollTo(0,coords.y) // 如何更新界面
       })
       .start(); // 开始缓动
-    }
+    }}
 }

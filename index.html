@@ -36,13 +36,13 @@
                 <a href="#siteWorks">作品</a>
               </li>
               <li>
-                <a href="#">博客</a>
+                <a href="https://blog.csdn.net/zhouyl02" target="_blank">博客</a>
               </li>
               <li>
-                <a href="#">日历</a>
+                <a href="https://github.com/zhouyl02" target="_blank">Github</a>
               </li>
               <li>
-                <a href="#">联系方式</a>
+                <a href="#">留言板</a>
               </li>
               <li>
                 <a href="#">其他</a>
@@ -76,6 +76,8 @@
                 <dd>iszhouyl@163.com</dd>
                 <dt>手机</dt>
                 <dd>17623561581</dd>
+                <dt>箴言</dt>
+                <dd>Stay hungry, stay foolish</dd>
               </dl>
             </div>
           </div>
@@ -220,12 +222,25 @@
           </div>
         </div>
       </section>
+      <section class='message'>
+        <h2>留言</h2>
+        <ol id="messageList"></ol>
+        <form id="postMessageForm" style="width:700px;margin:50px auto">
+          <label for="">姓名</label>
+          <input type="text" name="name">
+          <label for="">内容</label>
+          <input type="text" name="content">
+          <input type="submit" value="提交">
+        </form>
+      </section>
       <audio class="music pause" src="./shiningStar.mp3"></audio>
-      <script src="./scripts/jquery.min.js"></script>
-      <script src="./scripts/mouse.js"></script>
-      <script src="./scripts/Cooldog.js"></script>
+      <script src="./scripts/jquery.min.js"></script>      
+      <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-live-query-min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
       <script src="./scripts/scoll.js"></script>
+      <script src="./scripts/mouse.js"></script>
+      <script src="./scripts/Cooldog.js"></script>
+      <script src="./scripts/message.js"></script>
       <script>
         siteWelcome.classList.remove('active')
       </script>

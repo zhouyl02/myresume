@@ -1,0 +1,38 @@
+.dark-matter {    
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 694px;
+    background: #38393d;
+    padding: 20px 30px;
+    color: #D3D3D3;
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    vertical-align: center;
+    }
+.dark-matter >label{
+    padding: 0 10px;
+}
+.button{
+    width: 50px;
+    line-height: 25px;
+    border: 1px solid #8cdcfe;
+    border-radius: 5px;
+    background: #2c2e32;
+    color: #D3D3D3;
+    font-size: 16px;
+}
+.button:hover{
+    cursor: pointer;
+}
+section.message>ol {
+    max-width: 754px;
+    margin: 50px auto;
+    border-top: 1px solid #ececec;
+}
+
+section.message>ol>li {
+    padding: 16px;
+    border-bottom: 1px solid #7f868a;
+    color: #d4d2d5;
+}

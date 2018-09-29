@@ -8,7 +8,7 @@ AV.init({
 
 var query = new AV.Query('Message');
 query.find().then(function (messages) {
-    let array = messages.map((item) => item.attributes)
+    let array = messages.map((item) => item.attributes)    
     array.forEach((item) => {
         let li = document.createElement('li')
         li.innerText = `${item.name}: ${item.content}`
@@ -31,11 +31,13 @@ myForm.addEventListener('submit', function (e){
         'content': content
       }).then(function(object) {
         let li = document.createElement('li')
-        li.innerText = `${object.attributes.name}: ${object.attributes.content}`
-        let messageList = document.querySelector('#messageList')
-        messageList.appendChild(li)
-        myForm.querySelector('input[name=content]').value = ''
-        myForm.querySelector('input[name=name]').value = ''
+        if(object.attributes.name !== '' && object.attributes.content !== '') {
+            li.innerText = `${object.attributes.name}: ${object.attributes.content}`
+            let messageList = document.querySelector('#messageList')
+            messageList.appendChild(li)
+            myForm.querySelector('input[name=content]').value = ''
+            myForm.querySelector('input[name=name]').value = ''
+        }
     })
 })
 

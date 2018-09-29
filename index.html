@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/mouse.css">
     <link rel="stylesheet" href="./CSS/Cooldog.css">
     <link rel="stylesheet" href="./CSS/loading.css">
+    <link rel="stylesheet" href="./CSS/form.css">
     <script src="//at.alicdn.com/t/font_818303_uz3qcoofhhp.js"></script>
     <style type="text/css">      
       .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
@@ -42,7 +43,7 @@
                 <a href="https://github.com/zhouyl02" target="_blank">Github</a>
               </li>
               <li>
-                <a href="#">留言板</a>
+                <a href="#messageBoard">留言板</a>
               </li>
               <li>
                 <a href="#">其他</a>
@@ -222,15 +223,17 @@
           </div>
         </div>
       </section>
-      <section class='message'>
-        <h2>留言</h2>
+      <section data-x id='messageBoard' class='message'>        
+        <h2>留言板</h2>
         <ol id="messageList"></ol>
-        <form id="postMessageForm" style="width:700px;margin:50px auto">
-          <label for="">姓名</label>
-          <input type="text" name="name">
-          <label for="">内容</label>
+        <form id="postMessageForm" class="dark-matter">            
+          <label>您的名字 :</label>
+          <input id="name" type="text" name="name">
+          <label>您的留言 :</label>
           <input type="text" name="content">
-          <input type="submit" value="提交">
+          <label>            
+            <input type="submit" class="button" value="提交" >
+          </label>
         </form>
       </section>
       <audio class="music pause" src="./shiningStar.mp3"></audio>

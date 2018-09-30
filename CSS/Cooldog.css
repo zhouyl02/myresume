@@ -1,7 +1,7 @@
 .Cooldog_container {
     width: 750px;
     height: 460px; /*底部导航条高度*/
-    margin: 60px auto 0;
+    margin: 40px auto 0;
     position: relative;
     overflow: hidden;
 }

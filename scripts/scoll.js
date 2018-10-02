@@ -51,7 +51,7 @@ function animate(time) {
 requestAnimationFrame(animate);
 for(let i=0; i<aTags.length; i++){
   aTags[i].onclick = function(x){
-    if(i !== 3 && i !== 4){
+    if(i !== 4 && i !== 5){
     x.preventDefault()
     let a = x.currentTarget
     let href = a.getAttribute('href') //'#siteAbout'

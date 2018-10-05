@@ -8,7 +8,7 @@ $(function () {
 	}).mouseleave(function () {
 		$('.btn_left').hide('1000');
 		$('.btn_right').hide('1000');
-		timer = setInterval(btn_right, 3000);
+		timer = setInterval(btn_right, 2000);
 	});
 	
 	var arr = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7'];

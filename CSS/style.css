@@ -15,7 +15,7 @@ padding: 0;
 hr {
 height: 0;
 border: none;
-border-top: 1px solid #38393D;
+border-top: 1px solid #989ca1;
 }
 ul,
 ol {
@@ -152,9 +152,9 @@ width: auto;
 background-color: rgba(0, 0, 0, 0.5);
 }
 .userCard {
-max-width: 74%;
-margin-left: 13%;
-margin-right: 13%;
+max-width: 940px;
+margin-left: auto;
+margin-right: auto;
 background-color: #38393D;
 box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -184,6 +184,7 @@ float: left;
 float: left;
 margin-left: 65px;
 width: 470px;
+overflow: hidden;
 }
 .userCard .text h1 {
 margin-top: 18px;
